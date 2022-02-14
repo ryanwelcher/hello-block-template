@@ -12,16 +12,15 @@
       "name": "Ryan Welcher",
       "url": "https://ryanwelcher.com"
     },
-    "homepage": "https://github.com/ryanwelcher/dynamic-block-template",
+    "homepage": "https://github.com/ryanwelcher/hello-block-template",
     "repository": {
       "type": "git",
-      "url": "https://github.com/ryanwelcher/dynamic-block-template.git"
+      "url": "https://github.com/ryanwelcher/hello-block-template.git"
     },
     "bugs": {
-      "url": "https://github.com/ryanwelcher/dynamic-block-template/issues"
+      "url": "https://github.com/ryanwelcher/hello-block-template/issues"
     },
     "publishConfig": {
       "access": "public"
     }
   }
-s  

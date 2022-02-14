@@ -1,0 +1,55 @@
+/**
+ * WordPress dependencies
+ */
+import { registerBlockType } from '@wordpress/blocks';
+import { __ } from '@wordpress/i18n';
+import { useBlockProps } from '@wordpress/block-editor';
+
+/**
+ * Internal dependencies
+ */
+import json from './block.json';
+
+/**
+ * Import the CSS
+ */
+import './style.scss';
+import './editor.scss';
+
+// Destructure out the name of the block as defined in the block.json file.
+const { name } = json;
+
+/**
+ * Edit must be a React component as to not violate the rules of hooks.
+ */
+const Edit = () => {
+	return (
+		<p { ...useBlockProps() }>
+			{ __(
+				'My First Block – hello from the editor!',
+				'my-first-block'
+			) }
+		</p>
+	);
+};
+
+/**
+ * The function passed to the save property, should be a regular JavaScript function.
+ */
+const saveFunction = () => {
+	return (
+		<p { ...useBlockProps.save() }>
+			{ __(
+				'My First Block – hello from the front end!',
+				'my-first-block'
+			) }
+		</p>
+	);
+};
+
+/**
+ * Every block starts by registering a new block type definition.
+ *
+ * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-registration/
+ */
+registerBlockType( name, { edit: Edit, save: saveFunction } );
