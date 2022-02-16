@@ -1,5 +1,5 @@
 {
-    "name": "@ryanwelcher/hello-block",
+    "name": "@ryanwelcher/hello-block-template",
     "version": "0.0.1",
     "description": "A template for use with @wordpress/create-block to create a very simple block",
     "license": "GPL-2.0-or-later",
