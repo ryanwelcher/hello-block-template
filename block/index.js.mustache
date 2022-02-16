@@ -16,11 +16,17 @@ import json from './block.json';
 import './style.scss';
 import './editor.scss';
 
-// Destructure out the name of the block as defined in the block.json file.
+/*
+ * Destructure out the name of the block as defined in the block.json file.
+ * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#object_destructuring
+ */
 const { name } = json;
 
 /**
- * Edit must be a React component as to not violate the rules of hooks.
+ * Edit must be a React component as to not violate the "Rules of Hooks" in React.js.
+ *
+ * @see https://reactjs.org/docs/hooks-rules.html
+ * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-edit-save/#edit
  */
 const Edit = () => {
 	return (
@@ -34,7 +40,9 @@ const Edit = () => {
 };
 
 /**
- * The function passed to the save property, should be a regular JavaScript function.
+ * The function passed to the save property should be a regular JavaScript function.
+ *
+ * https://developer.wordpress.org/block-editor/reference-guides/block-api/block-edit-save/#save
  */
 const saveFunction = () => {
 	return (
